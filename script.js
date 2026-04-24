@@ -11,51 +11,51 @@
   var cur = 0;
   var activeBg = bgA;
   var nextBg = bgB;
+  var loaded = {};
+
+  function preloadImages(){
+    items.forEach(function(item){
+      var src = item.getAttribute('data-bg');
+      if(!src) return;
+
+      var img = new Image();
+      img.src = src;
+      loaded[src] = img;
+    });
+  }
 
   function setBg(index){
     var bg = items[index].getAttribute('data-bg');
     if(!bg) return;
 
-    var img = new Image();
+    items.forEach(function(i){ i.classList.remove('vis'); });
+    items[index].classList.add('vis');
 
-    img.onload = function(){
-      items.forEach(function(i){ i.classList.remove('vis'); });
-      items[index].classList.add('vis');
+    nextBg.style.backgroundImage = "url('" + bg + "')";
+    nextBg.style.transform = 'scale(1.04)';
+    nextBg.classList.add('is-active');
+    activeBg.classList.remove('is-active');
 
-      nextBg.style.backgroundImage = "url('" + bg + "')";
-      nextBg.classList.add('is-active');
-      activeBg.classList.remove('is-active');
+    requestAnimationFrame(function(){
+      nextBg.style.transform = 'scale(1)';
+    });
 
-      /* reset scale para disparar o Ken Burns */
-      nextBg.style.transition = 'none';
-      nextBg.style.transform = 'scale(1.08)';
-      requestAnimationFrame(function(){
-        requestAnimationFrame(function(){
-          nextBg.style.transition = 'transform 6s ease, opacity .7s ease';
-          nextBg.style.transform = 'scale(1)';
-        });
-      });
-
-      var temp = activeBg;
-      activeBg = nextBg;
-      nextBg = temp;
-    };
-
-    img.onerror = function(){
-      /* se imagem não carregar, troca o texto mesmo assim */
-      items.forEach(function(i){ i.classList.remove('vis'); });
-      items[index].classList.add('vis');
-    };
-
-    img.src = bg;
+    var temp = activeBg;
+    activeBg = nextBg;
+    nextBg = temp;
   }
 
-  setBg(cur);
+  preloadImages();
+
+  var firstBg = items[0].getAttribute('data-bg');
+  bgA.style.backgroundImage = "url('" + firstBg + "')";
+  bgA.classList.add('is-active');
+  items[0].classList.add('vis');
 
   setInterval(function(){
     cur = (cur + 1) % items.length;
     setBg(cur);
-  }, 2800);
+  }, 4500);
 })();
 
 /* ============================================
