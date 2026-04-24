@@ -10,6 +10,7 @@
 </head>
 <body>
 
+<!-- FIX 11: Header azul clarinho + logo clara -->
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
     <a href="#hero" class="header-brand">
@@ -27,6 +28,7 @@
 </header>
 
 <!-- SEÇÃO 1 — HERO -->
+<!-- FIX 10: Timing corrigido - 4.5s por slide, transição suave -->
 <section id="hero" data-bg="images/VOCE1.jpg">
   <div class="hero-bg hero-bg-a"></div>
   <div class="hero-bg hero-bg-b"></div>
@@ -40,35 +42,38 @@
         <span class="h-item" data-bg="images/crescimento1.png">No seu Crescimento</span>
         <span class="h-item" data-bg="images/familia1.jpg">Na sua Família</span>
         <span class="h-item" data-bg="images/sonhos2.jpg">Nos seus Sonhos</span>
+        <!-- FIX 10: realização e conquistas com imagens diferentes -->
         <span class="h-item" data-bg="images/realizacao1.jpg">Na sua Realização</span>
-        <span class="h-item" data-bg="images/conquistas1.jpg">Nas suas Conquistas</span>
+        <span class="h-item" data-bg="images/conquistas2.jpg">Nas suas Conquistas</span>
         <span class="h-item" data-bg="images/amigos2.jpg">Na sua Diversão</span>
         <span class="h-item" data-bg="images/futuro1.png">No seu Futuro</span>
       </span>
     </h1>
     <p class="hsub r d2">O mercado financeiro foi construído para ganhar do seu dinheiro. A Zé Investe foi construída para cuidar dele.</p>
   </div>
-  <!-- BOTÃO CTA — circular, canto inferior direito, seta ↗ -->
+  <!-- FIX 1: Botão CTA — texto não cortado, tamanho mínimo aumentado -->
   <a href="https://wa.me/5516974005673" target="_blank" class="hero-cta" aria-label="Quero entender minha situação financeira">
-    <span class="hero-cta-text">Quero entender minha situação financeira</span>
     <span class="hero-cta-icon">↗</span>
+    <span class="hero-cta-text">Quero entender minha situação financeira</span>
   </a>
 </section>
 
+<!-- FIX 2: Sem gradiente de transição agressivo — blur leve apenas -->
+<div class="sec-sep"></div>
+
 <!-- SEÇÃO 2 — O QUE É A ZI? -->
-<div class="gd-tall" style="background:linear-gradient(var(--n0),var(--n1))"></div>
 <section id="s-zi" class="sec s1">
   <span class="ey ey-white r">O que é a ZI?</span>
   <div class="zi-grid r d1">
     <div class="zi-text">
       <h2 class="stit stit-left">Você decide o aonde, a gente te ajuda com a rota pra chegar lá.</h2>
       <p class="sbdy sbdy-left">Somos um escritório de planejamento financeiro pessoal independente. Não vendemos produto. Não vivemos de comissão. Não trabalhamos para corretora. Trabalhamos para você — e apenas para você.</p>
-      <!-- Imagem casal com mapa -->
       <div class="zi-img-wrap">
         <img src="images/casal-com-mapa.jpg" alt="Casal planejando o futuro" class="zi-img">
       </div>
     </div>
 
+    <!-- FIX 6: Orbital mais à direita e maior -->
     <div class="orb-wrap r d3">
       <div class="orb-stage-box" id="orbStage">
         <div class="orb-ring"></div>
@@ -100,9 +105,11 @@
   </div>
 </section>
 
+<div class="sec-sep"></div>
+
 <!-- SEÇÃO 3 — VOCÊ É O PRODUTO -->
-<div class="gd-tall" style="background:linear-gradient(var(--n1),var(--off))"></div>
-<section id="s-prob" class="sec sw">
+<!-- FIX 3: gradiente circular nas seções específicas -->
+<section id="s-prob" class="sec sw sec-circular-grad">
   <span class="ey r">O Problema</span>
   <h2 class="stit r d1">Se você não paga pelo produto, você é o produto.</h2>
   <div class="pg">
@@ -119,8 +126,9 @@
   </div>
 </section>
 
+<div class="sec-sep"></div>
+
 <!-- SEÇÃO 4 — MODELO DE ASSESSORIA -->
-<div class="gd-tall" style="background:linear-gradient(var(--off),var(--n1))"></div>
 <section id="s-mud" class="sec s1">
   <span class="ey r">O Contexto</span>
   <h2 class="stit r d1">O modelo de assessoria por comissão está com os dias contados.</h2>
@@ -175,8 +183,9 @@
   </div>
 </section>
 
+<div class="sec-sep"></div>
+
 <!-- SEÇÃO 5 — SOMOS REMUNERADOS + DUAS EQUIPES -->
-<div class="gd" style="background:linear-gradient(var(--n1),var(--n4))"></div>
 <section id="s-fee" class="sec s4">
   <span class="ey r">Diferencial</span>
   <h2 class="stit r d1">Somos remunerados apenas por você. E isso muda tudo.</h2>
@@ -203,7 +212,6 @@
   </div>
   <p class="fee-asterisk r d3">* A B3 cobra taxa de corretagem</p>
 
-  <!-- DUAS EQUIPES — fusão com Gestora -->
   <div class="sec-divider r d3"></div>
   <span class="ey r" style="margin-top:32px">A Gestora Parceira</span>
   <h2 class="stit r d1">Você tem duas equipes trabalhando pelo seu patrimônio.</h2>
@@ -231,65 +239,18 @@
   </div>
 </section>
 
-<!-- SEÇÃO 6 — NOSSO TRABALHO + DEPOIMENTOS -->
-<div class="gd" style="background:linear-gradient(var(--n4),var(--n0))"></div>
-<section id="s-gallery">
+<div class="sec-sep"></div>
+
+<!-- SEÇÃO 6 — PERSPECTIVA + DEPOIMENTOS (UNIFICADOS) -->
+<!-- FIX 7+8: Remove carrossel, coloca depoimentos direto. Sem frase introdutória dos depoimentos -->
+<section id="s-gallery" class="sec-circular-grad-dark">
   <div class="gal-header r">
     <span class="ey">Perspectiva</span>
-    <h2 class="stit" style="margin-bottom:8px">O planejamento que transforma patrimônio em liberdade.</h2>
+    <h2 class="stit">O planejamento que transforma patrimônio em liberdade.</h2>
     <p class="sbdy" style="margin-bottom:0">Não gerimos dinheiro. Gerimos o que o dinheiro pode fazer pela sua vida.</p>
-    <div class="gal-nav">
-      <button class="gal-nav-btn" id="galPrev" disabled>
-        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button class="gal-nav-btn" id="galNext">
-        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
   </div>
-  <div class="gal-track-wrap r d2">
-    <div class="gal-track" id="galTrack">
-      <div class="gal-item">
-        <img class="gal-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80" alt="Planejamento financeiro">
-        <div class="gal-overlay"></div>
-        <div class="gal-content"><span class="gal-tag">Planejamento</span><p class="gal-title">Do caos financeiro ao controle total</p><p class="gal-desc">Organize renda, dívidas e investimentos em um único plano coeso que evolui com você.</p></div>
-      </div>
-      <div class="gal-item">
-        <img class="gal-img" src="https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=800&q=80" alt="Crescimento patrimonial">
-        <div class="gal-overlay"></div>
-        <div class="gal-content"><span class="gal-tag">Patrimônio</span><p class="gal-title">Crescimento real, sem comissão oculta</p><p class="gal-desc">Cada alocação é feita pelo seu interesse — não pelo produto que rende mais para o assessor.</p></div>
-      </div>
-      <div class="gal-item">
-        <img class="gal-img" src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80" alt="Liberdade financeira">
-        <div class="gal-overlay"></div>
-        <div class="gal-content"><span class="gal-tag">Liberdade</span><p class="gal-title">Trabalhe porque quer, não porque precisa</p><p class="gal-desc">A independência financeira não é sorte — é o resultado de um plano bem executado ao longo do tempo.</p></div>
-      </div>
-      <div class="gal-item">
-        <img class="gal-img" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Proteção patrimonial">
-        <div class="gal-overlay"></div>
-        <div class="gal-content"><span class="gal-tag">Proteção</span><p class="gal-title">Blindagem do que você levou anos para construir</p><p class="gal-desc">Sucessão, proteção fiscal e patrimonial integrados em uma estratégia de longo prazo.</p></div>
-      </div>
-      <div class="gal-item">
-        <img class="gal-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Estratégia">
-        <div class="gal-overlay"></div>
-        <div class="gal-content"><span class="gal-tag">Estratégia</span><p class="gal-title">Carteira montada sob medida para você</p><p class="gal-desc">Sem produto de prateleira. Sem fundo de taxa absurda. Só o que faz sentido para o seu perfil.</p></div>
-      </div>
-    </div>
-  </div>
-  <div class="gal-dots r d3" id="galDots">
-    <button class="gal-dot on" data-idx="0"></button>
-    <button class="gal-dot" data-idx="1"></button>
-    <button class="gal-dot" data-idx="2"></button>
-    <button class="gal-dot" data-idx="3"></button>
-    <button class="gal-dot" data-idx="4"></button>
-  </div>
-</section>
 
-<!-- DEPOIMENTOS — dentro da Seção 6 -->
-<section id="s-test">
-  <span class="ey r">Depoimentos</span>
-  <h2 class="stit r d1">O que nossos clientes dizem depois de entender a diferença.</h2>
-  <p class="sbdy r d2">Profissionais de alta renda que decidiram parar de deixar o mercado decidir por eles.</p>
+  <!-- DEPOIMENTOS direto aqui, sem título extra -->
   <div class="testi-cols r d3">
     <div class="testi-col">
       <div class="testi-inner" style="animation-duration:22s">
@@ -324,8 +285,9 @@
   </div>
 </section>
 
+<div class="sec-sep"></div>
+
 <!-- SEÇÃO 7 — METODOLOGIA + FAQ -->
-<div style="height:1px;background:rgba(255,255,255,.06)"></div>
 <section id="s-passo">
   <span class="ey r">Metodologia</span>
   <h2 class="ptit-main r d1">Como funciona o sucesso da nossa metodologia</h2>
@@ -395,7 +357,7 @@
     </div>
   </div>
 
-  <!-- FAQ embutido logo abaixo, dentro da mesma seção -->
+  <!-- FIX 4: FAQ dark sem fundo branco bugado -->
   <div id="s-faq" class="faq-inside r d2">
     <span class="ey" style="color:var(--w30);border-color:var(--w12)">FAQ</span>
     <h2 class="stit" style="margin-bottom:0">Perguntas que todo mundo faz antes de começar.</h2>
@@ -410,27 +372,30 @@
   </div>
 </section>
 
-<!-- SLIDER LOGOS -->
-<div style="height:1px;background:rgba(255,255,255,.06)"></div>
+<div class="sec-sep"></div>
+
+<!-- FIX 5: SLIDER LOGOS — inclui logos de parceiros -->
 <section id="s-logos">
   <div class="logos-track-wrap">
     <div class="logos-track">
-      <div class="logo-slide"><span class="logo-name">BTG Pactual</span></div><div class="logo-dot"></div>
-      <div class="logo-slide"><span class="logo-name">XP Investimentos</span></div><div class="logo-dot"></div>
-      <div class="logo-slide"><span class="logo-name">Safra</span></div><div class="logo-dot"></div>
-      <div class="logo-slide"><span class="logo-name">Genial</span></div><div class="logo-dot"></div>
-      <div class="logo-slide"><span class="logo-name">Avenue</span></div><div class="logo-dot"></div>
-      <div class="logo-slide"><span class="logo-name">BTG Pactual</span></div><div class="logo-dot"></div>
-      <div class="logo-slide"><span class="logo-name">XP Investimentos</span></div><div class="logo-dot"></div>
-      <div class="logo-slide"><span class="logo-name">Safra</span></div><div class="logo-dot"></div>
-      <div class="logo-slide"><span class="logo-name">Genial</span></div><div class="logo-dot"></div>
-      <div class="logo-slide"><span class="logo-name">Avenue</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><img src="corretoras/btg.png" alt="BTG Pactual" class="logo-img"><span class="logo-name">BTG Pactual</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><img src="corretoras/xp.png" alt="XP" class="logo-img"><span class="logo-name">XP Investimentos</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><img src="corretoras/safra.png" alt="Safra" class="logo-img"><span class="logo-name">Safra</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><img src="corretoras/genial.png" alt="Genial" class="logo-img"><span class="logo-name">Genial</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><img src="corretoras/avenue.png" alt="Avenue" class="logo-img"><span class="logo-name">Avenue</span></div><div class="logo-dot"></div>
+      <!-- duplicatas para loop -->
+      <div class="logo-slide"><img src="corretoras/btg.png" alt="BTG Pactual" class="logo-img"><span class="logo-name">BTG Pactual</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><img src="corretoras/xp.png" alt="XP" class="logo-img"><span class="logo-name">XP Investimentos</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><img src="corretoras/safra.png" alt="Safra" class="logo-img"><span class="logo-name">Safra</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><img src="corretoras/genial.png" alt="Genial" class="logo-img"><span class="logo-name">Genial</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><img src="corretoras/avenue.png" alt="Avenue" class="logo-img"><span class="logo-name">Avenue</span></div><div class="logo-dot"></div>
     </div>
   </div>
 </section>
 
-<!-- SEÇÃO 8 — 1º PASSO (CTA FINAL) -->
-<div style="height:1px;background:rgba(7,21,46,.08)"></div>
+<div class="sec-sep"></div>
+
+<!-- SEÇÃO 8 — CTA FINAL -->
 <section id="scta">
   <div class="cta-glow"></div>
   <span class="ey ey-dark r" style="position:relative;z-index:1">Diagnóstico gratuito</span>
@@ -496,24 +461,29 @@
     </div>
   </div>
 
-  <!-- Mapa -->
-  <div class="footer-map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.5!2d-47.8122!3d-21.1775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.%20Presidente%20Vargas%2C%202121%2C%20Ribeir%C3%A3o%20Preto%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1"
-      width="100%"
-      height="220"
-      style="border:0;border-radius:12px;filter:grayscale(1) invert(1) brightness(.7) contrast(.9)"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Localização Zé Investe">
-    </iframe>
+  <!-- FIX 9: Mapa menor, ao lado do endereço -->
+  <div class="footer-map-row">
+    <div class="footer-address-card">
+      <p class="faddr-label">Endereço</p>
+      <p class="faddr-text">Av. Presidente Vargas, 2121<br>CJ 1407 — Jardim Santa Ângela<br>Ribeirão Preto / SP</p>
+    </div>
+    <div class="footer-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.5!2d-47.8122!3d-21.1775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.%20Presidente%20Vargas%2C%202121%2C%20Ribeir%C3%A3o%20Preto%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1"
+        width="100%"
+        height="140"
+        style="border:0;border-radius:10px;filter:grayscale(1) invert(1) brightness(.7) contrast(.9)"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização Zé Investe">
+      </iframe>
+    </div>
   </div>
 
   <hr class="fhr">
   <p class="fdisc">* A B3 cobra taxa de corretagem.<br><br>A Zé Investe atua como escritório de planejamento financeiro pessoal e não exerce atividade de consultoria de valores mobiliários ou assessoria de investimentos nos termos das Resoluções CVM nº 19/2021 e nº 178/2023. A gestão da carteira administrada é realizada pela Mont Capital Gestão e Administração de Recursos S.A. (CNPJ 22.598.618/0001-38), autorizada pela CVM. © 2025 Zé Investe.</p>
 
-  <!-- WhatsApp Floating Button — aparece só após seção 2, estilo expandível -->
   <a href="https://wa.me/5516974005673" target="_blank" class="whatsapp-float" id="whatsappFloat" aria-label="Falar no WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     <span class="whatsapp-float-text">WhatsApp</span>
