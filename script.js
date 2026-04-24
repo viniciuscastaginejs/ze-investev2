@@ -41,6 +41,12 @@
       nextBg = temp;
     };
 
+    img.onerror = function(){
+      /* se imagem não carregar, troca o texto mesmo assim */
+      items.forEach(function(i){ i.classList.remove('vis'); });
+      items[index].classList.add('vis');
+    };
+
     img.src = bg;
   }
 
@@ -274,7 +280,8 @@ function faq(btn){
 })();
 
 /* ============================================
-   HEADER SCROLL — GLASSMORPHISM
+   HEADER SCROLL — GLASSMORPHISM ACUMULADO
+   (header sempre visível com fundo azul)
    ============================================ */
 (function(){
   var header = document.getElementById('siteHeader');
@@ -286,4 +293,31 @@ function faq(btn){
 
   toggleHeader();
   window.addEventListener('scroll', toggleHeader, { passive: true });
+})();
+
+/* ============================================
+   WHATSAPP FLOAT — aparece após rolar além da
+   Seção 2 (#s-zi)
+   ============================================ */
+(function(){
+  var btn = document.getElementById('whatsappFloat');
+  var trigger = document.getElementById('s-zi');
+  if(!btn || !trigger) return;
+
+  var shown = false;
+
+  function checkVisibility(){
+    var rect = trigger.getBoundingClientRect();
+    /* mostra quando o FINAL da seção 2 passa pelo topo da viewport */
+    if(!shown && rect.bottom < 0){
+      btn.classList.add('wz-visible');
+      shown = true;
+    } else if(shown && rect.bottom >= 0){
+      btn.classList.remove('wz-visible');
+      shown = false;
+    }
+  }
+
+  window.addEventListener('scroll', checkVisibility, { passive: true });
+  checkVisibility();
 })();
