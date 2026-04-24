@@ -1,5 +1,5 @@
 /* ============================================
-   HERO — pré-carrega tudo, crossfade suave, 4.5s por slide
+   HERO — pré-carrega tudo, crossfade suave, 4.5s por slid
    ============================================ */
 (function(){
   var items = Array.from(document.querySelectorAll('.h-item'));
