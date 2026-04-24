@@ -79,8 +79,21 @@ body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:
   text-align:left;padding:120px 24px 80px;overflow:hidden;background:var(--n0);
 }
 .hero-bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  z-index:0;
+  opacity:0;
   transform:scale(1.03);
   transition:opacity .8s ease, transform 2.5s ease;
+  will-change:opacity, transform;
+}
+
+.hero-bg.is-active{
+  opacity:1;
+  transform:scale(1);
 }
 .hero-bg.is-active{opacity:1;transform:scale(1)}
 .hero-overlay{
