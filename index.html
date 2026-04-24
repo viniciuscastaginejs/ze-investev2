@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zé Investe — Planejamento Financeiro Pessoal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#hero" class="header-brand">
+      <img src="../images/logo-z.png" alt="Zé Investe" class="header-logo">
+      <span>Zé Investe</span>
+    </a>
+    <div class="header-partners">
+      <img src="../corretoras/btg.png" alt="BTG Pactual">
+      <img src="../corretoras/xp.png" alt="XP">
+      <img src="../corretoras/safra.png" alt="Safra">
+      <img src="../corretoras/genial.png" alt="Genial">
+      <img src="../corretoras/avenue.png" alt="Avenue">
+    </div>
+  </div>
+</header>
+
+<!-- SEÇÃO 1 — HERO -->
+<section id="hero" data-bg="../images/VOCE1.jpg">
+  <div class="hero-bg hero-bg-a"></div>
+  <div class="hero-bg hero-bg-b"></div>
+  <div class="hero-overlay"></div>
+  <div class="hcon">
+    <h1 class="htit r d1">
+      <span class="h-static">INVISTA</span>
+      <span class="h-dyn">
+        <span class="h-item vis" data-bg="../images/voce1.jpg">Em Você</span>
+        <span class="h-item" data-bg="../images/amigos1.jpg">Na sua Vida</span>
+        <span class="h-item" data-bg="../images/crescimento1.png">No seu Crescimento</span>
+        <span class="h-item" data-bg="../images/familia1.jpg">Na sua Família</span>
+        <span class="h-item" data-bg="../images/sonhos2.jpg">Nos seus Sonhos</span>
+        <span class="h-item" data-bg="../images/realizacao1.jpg">Na sua Realização</span>
+        <span class="h-item" data-bg="../images/conquistas1.jpg">Nas suas Conquistas</span>
+        <span class="h-item" data-bg="../images/amigos2.jpg">Na sua Diversão</span>
+        <span class="h-item" data-bg="../images/futuro1.png">No seu Futuro</span>
+      </span>
+    </h1>
+    <p class="hsub r d2">O mercado financeiro foi construído para ganhar do seu dinheiro. A Zé Investe foi construída para cuidar dele.</p>
+  </div>
+  <!-- BOTÃO CTA — circular, canto inferior direito, seta ↗ -->
+  <a href="https://wa.me/5516974005673" target="_blank" class="hero-cta" aria-label="Quero entender minha situação financeira">
+    <span class="hero-cta-text">Quero entender minha situação financeira</span>
+    <span class="hero-cta-icon">↗</span>
+  </a>
+</section>
+
+<!-- SEÇÃO 2 — O QUE É A ZI? -->
+<div class="gd-tall" style="background:linear-gradient(var(--n0),var(--n1))"></div>
+<section id="s-zi" class="sec s1">
+  <span class="ey ey-white r">O que é a ZI?</span>
+  <div class="zi-grid r d1">
+    <div class="zi-text">
+      <h2 class="stit stit-left">Você decide o aonde, a gente te ajuda com a rota pra chegar lá.</h2>
+      <p class="sbdy sbdy-left">Somos um escritório de planejamento financeiro pessoal independente. Não vendemos produto. Não vivemos de comissão. Não trabalhamos para corretora. Trabalhamos para você — e apenas para você.</p>
+      <!-- Imagem casal com mapa -->
+      <div class="zi-img-wrap">
+        <img src="../images/casal-com-mapa.jpg" alt="Casal planejando o futuro" class="zi-img">
+      </div>
+    </div>
+
+    <div class="orb-wrap r d3">
+      <div class="orb-stage-box" id="orbStage">
+        <div class="orb-ring"></div>
+        <div class="orb-ring-inner"></div>
+        <div class="orb-center" id="orbCenter">
+          <div class="orb-center-pulse"></div>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="orb-card-box" id="orbCard">
+        <div class="orb-card-top2">
+          <span class="orb-badge" id="orbNum">Passo 1</span>
+          <span class="orb-tag">FPSB</span>
+        </div>
+        <h3 class="orb-ctit" id="orbTitle">Estabelecer o relacionamento</h3>
+        <p class="orb-cdesc" id="orbDesc">Começamos entendendo quem você é e o que espera. Sem compromisso, sem produto, sem pressão.</p>
+        <div class="orb-bar-row">
+          <span class="orb-bar-lbl">Impacto no plano</span>
+          <div class="orb-track"><div class="orb-fill" id="orbFill" style="width:16%"></div></div>
+          <span class="orb-pct" id="orbPct">16%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 3 — VOCÊ É O PRODUTO -->
+<div class="gd-tall" style="background:linear-gradient(var(--n1),var(--off))"></div>
+<section id="s-prob" class="sec sw">
+  <span class="ey r">O Problema</span>
+  <h2 class="stit r d1">Se você não paga pelo produto, você é o produto.</h2>
+  <div class="pg">
+    <div class="pc r d1">
+      <p>Seu gerente de banco não trabalha para você. Ele trabalha para o banco. O assessor de investimentos não trabalha para você. Ele trabalha para a corretora. Isso não é opinião — é o modelo de negócio deles.</p>
+      <p>Cada produto que te oferecem carrega uma <strong>comissão embutida</strong> que você não vê, não aprovou e provavelmente nunca vai saber o valor. Desde novembro de 2024, as corretoras são obrigadas por lei a declarar quanto ganham com a sua carteira. Peça esse número. A resposta vai surpreender.</p>
+      <p>Não estamos aqui para atacar ninguém. Estamos aqui para ser o que o mercado ainda não tem em escala: um planejador que <strong>ganha quando você ganha</strong>, não quando você compra.</p>
+    </div>
+    <div class="pcards r d2">
+      <div class="pcard"><p class="pn">01</p><p class="pt">Conflito de interesses</p><p class="pb2">O assessor é remunerado pelos produtos que distribui — incentivo estrutural para te colocar no que rende para ele, não para você.</p></div>
+      <div class="pcard"><p class="pn">02</p><p class="pt">Comissões ocultas</p><p class="pb2">Fundos, previdências e produtos estruturados carregam spreads e rebates que nunca aparecem no seu extrato.</p></div>
+      <div class="pcard"><p class="pn">03</p><p class="pt">A alternativa existe</p><p class="pb2">O modelo fee-only já dominou Reino Unido e EUA. Agora chega ao Brasil — você pode se antecipar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 4 — MODELO DE ASSESSORIA -->
+<div class="gd-tall" style="background:linear-gradient(var(--off),var(--n1))"></div>
+<section id="s-mud" class="sec s1">
+  <span class="ey r">O Contexto</span>
+  <h2 class="stit r d1">O modelo de assessoria por comissão está com os dias contados.</h2>
+  <p class="sbdy r d2">Não é especulação — é história. No Reino Unido, quando a regulação proibiu os rebates em 2012, os assessores migraram rapidamente para taxas fixas. Nos Estados Unidos, o mesmo movimento empurrou a maioria para a independência das corretoras.</p>
+  <p class="sbdy r d2">O Brasil está vivendo essa transição agora. O mercado de planejamento financeiro fee-only cresceu 28% em 2025. São 59 milhões de investidores e R$ 7,9 trilhões em ativos — e ainda 80% presos nos bancos tradicionais.</p>
+  <div class="chr r d3">
+    <div class="cb">
+      <p class="cf">🇬🇧 Reino Unido</p>
+      <svg class="csv" viewBox="0 0 240 100">
+        <defs>
+          <linearGradient id="g-blue" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3b82f6" stop-opacity=".25"/>
+            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="g-green" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#22c55e" stop-opacity=".25"/>
+            <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polygon points="0,9 38,15 68,28 88,54 110,80 134,94 180,100 230,101 240,101 240,100 0,100" fill="url(#g-blue)"/>
+        <polyline points="0,9 38,15 68,28 88,54 110,80 134,94 180,100 230,101" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <polygon points="0,101 38,99 68,90 88,66 110,42 134,26 180,14 230,8 240,6 240,100 0,100" fill="url(#g-green)"/>
+        <polyline points="0,101 38,99 68,90 88,66 110,42 134,26 180,14 230,8 240,6" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="4" y="8" fill="#3b82f6" font-size="7" font-family="Montserrat" font-weight="700">Comissão</text>
+        <text x="168" y="7" fill="#22c55e" font-size="7" font-family="Montserrat" font-weight="700">Fee-based</text>
+      </svg>
+      <p class="cn">Os assessores substituíram os rebates pelas <b>taxas fixas</b>.</p>
+    </div>
+    <div class="cb">
+      <p class="cf">🇺🇸 Estados Unidos</p>
+      <svg class="csv" viewBox="0 0 240 100">
+        <defs>
+          <linearGradient id="g-green2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#22c55e" stop-opacity=".2"/>
+            <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polygon points="0,14 38,22 68,38 104,70 138,90 168,100 216,102 240,102 240,100 0,100" fill="url(#g-green2)"/>
+        <polyline points="0,14 38,22 68,38 104,70 138,90 168,100 216,102" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="4" y="13" fill="#22c55e" font-size="7" font-family="Montserrat" font-weight="700">Fee-based</text>
+      </svg>
+      <p class="cn">Após a mudança regulatória, a maioria buscou <b>independência das corretoras</b>.</p>
+    </div>
+  </div>
+  <div class="csr r d3">
+    <h3>A pergunta não é se o modelo vai mudar.</h3>
+    <p>É se você vai esperar ou se antecipar.</p>
+    <a href="https://wa.me/5516974005673" target="_blank" class="pb">
+      <span class="pb-t">Quero me antecipar</span>
+      <span class="pb-i"><svg viewBox="0 0 24 24" fill="none" stroke="#07152e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<!-- SEÇÃO 5 — SOMOS REMUNERADOS + DUAS EQUIPES -->
+<div class="gd" style="background:linear-gradient(var(--n1),var(--n4))"></div>
+<section id="s-fee" class="sec s4">
+  <span class="ey r">Diferencial</span>
+  <h2 class="stit r d1">Somos remunerados apenas por você. E isso muda tudo.</h2>
+  <p class="sbdy r d2">Nosso modelo é fee-only — uma taxa fixa calculada sobre o patrimônio que gerimos juntos. Não existe comissão de produto. Não existe rebate de corretora. Não existe spread oculto.</p>
+  <p class="sbdy r d2">Quando indicamos uma alocação, é porque acreditamos que é a melhor para você — não porque alguém está nos pagando para isso.</p>
+  <div class="fp r d3">
+    <div class="fcol">
+      <p class="fct">O que você nunca vai pagar</p>
+      <div class="fi"><span class="fm">—</span>Taxa de abertura</div>
+      <div class="fi"><span class="fm">—</span>Taxa de resgate</div>
+      <div class="fi"><span class="fm">—</span>Comissão ou corretagem*</div>
+      <div class="fi"><span class="fm">—</span>Spreads</div>
+      <div class="fi"><span class="fm">—</span>TED, DOC ou TEF. Nada.</div>
+    </div>
+    <div class="fcol">
+      <p class="fct">O que você recebe</p>
+      <div class="fi"><span class="fm">+</span>Diagnóstico financeiro completo</div>
+      <div class="fi"><span class="fm">+</span>IPS personalizado</div>
+      <div class="fi"><span class="fm">+</span>Coordenação com gestora parceira</div>
+      <div class="fi"><span class="fm">+</span>Revisões semestrais</div>
+      <div class="fi"><span class="fm">+</span>Relatórios de performance</div>
+      <div class="fi"><span class="fm">+</span>Acesso direto ao seu planejador</div>
+    </div>
+  </div>
+  <p class="fee-asterisk r d3">* A B3 cobra taxa de corretagem</p>
+
+  <!-- DUAS EQUIPES — fusão com Gestora -->
+  <div class="sec-divider r d3"></div>
+  <span class="ey r" style="margin-top:32px">A Gestora Parceira</span>
+  <h2 class="stit r d1">Você tem duas equipes trabalhando pelo seu patrimônio.</h2>
+  <p class="sbdy r d2">Dois profissionais. Um só INTERESSE: Gerar riqueza para você!</p>
+  <div class="gc r d3">
+    <div>
+      <span class="gtag">Zé Investe</span>
+      <p class="gnm">Planejamento</p>
+      <div class="gbdy">
+        <p>A Zé Investe cuida do planejamento. Entendemos quem você é, mapeamos objetivos, construímos o IPS e acompanhamos o plano ao longo do tempo.</p>
+        <p>Somos o profissional que senta com você, entende sua família, seus sonhos e vulnerabilidades — e traduz isso em estratégia.</p>
+      </div>
+    </div>
+    <div>
+      <span class="gtag">Mont Capital</span>
+      <p class="gnm">Execução</p>
+      <div class="gbdy">
+        <p>A Mont Capital é gestora regulada pela CVM, fundada em 2015. Analisou mais de 42 mil fundos para selecionar os aprovados. Cada carteira é montada sob medida.</p>
+        <p>O dinheiro fica no seu nome, no seu CPF, nas maiores corretoras do país.</p>
+      </div>
+      <div class="chips">
+        <span class="chip">BTG Pactual</span><span class="chip">XP</span><span class="chip">Safra</span><span class="chip">Genial</span><span class="chip">Avenue</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 6 — NOSSO TRABALHO + DEPOIMENTOS -->
+<div class="gd" style="background:linear-gradient(var(--n4),var(--n0))"></div>
+<section id="s-gallery">
+  <div class="gal-header r">
+    <span class="ey">Perspectiva</span>
+    <h2 class="stit" style="margin-bottom:8px">O planejamento que transforma patrimônio em liberdade.</h2>
+    <p class="sbdy" style="margin-bottom:0">Não gerimos dinheiro. Gerimos o que o dinheiro pode fazer pela sua vida.</p>
+    <div class="gal-nav">
+      <button class="gal-nav-btn" id="galPrev" disabled>
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="gal-nav-btn" id="galNext">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="gal-track-wrap r d2">
+    <div class="gal-track" id="galTrack">
+      <div class="gal-item">
+        <img class="gal-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80" alt="Planejamento financeiro">
+        <div class="gal-overlay"></div>
+        <div class="gal-content"><span class="gal-tag">Planejamento</span><p class="gal-title">Do caos financeiro ao controle total</p><p class="gal-desc">Organize renda, dívidas e investimentos em um único plano coeso que evolui com você.</p></div>
+      </div>
+      <div class="gal-item">
+        <img class="gal-img" src="https://images.unsplash.com/photo-1642790551116-18e150f248e3?w=800&q=80" alt="Crescimento patrimonial">
+        <div class="gal-overlay"></div>
+        <div class="gal-content"><span class="gal-tag">Patrimônio</span><p class="gal-title">Crescimento real, sem comissão oculta</p><p class="gal-desc">Cada alocação é feita pelo seu interesse — não pelo produto que rende mais para o assessor.</p></div>
+      </div>
+      <div class="gal-item">
+        <img class="gal-img" src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80" alt="Liberdade financeira">
+        <div class="gal-overlay"></div>
+        <div class="gal-content"><span class="gal-tag">Liberdade</span><p class="gal-title">Trabalhe porque quer, não porque precisa</p><p class="gal-desc">A independência financeira não é sorte — é o resultado de um plano bem executado ao longo do tempo.</p></div>
+      </div>
+      <div class="gal-item">
+        <img class="gal-img" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80" alt="Proteção patrimonial">
+        <div class="gal-overlay"></div>
+        <div class="gal-content"><span class="gal-tag">Proteção</span><p class="gal-title">Blindagem do que você levou anos para construir</p><p class="gal-desc">Sucessão, proteção fiscal e patrimonial integrados em uma estratégia de longo prazo.</p></div>
+      </div>
+      <div class="gal-item">
+        <img class="gal-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Estratégia">
+        <div class="gal-overlay"></div>
+        <div class="gal-content"><span class="gal-tag">Estratégia</span><p class="gal-title">Carteira montada sob medida para você</p><p class="gal-desc">Sem produto de prateleira. Sem fundo de taxa absurda. Só o que faz sentido para o seu perfil.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="gal-dots r d3" id="galDots">
+    <button class="gal-dot on" data-idx="0"></button>
+    <button class="gal-dot" data-idx="1"></button>
+    <button class="gal-dot" data-idx="2"></button>
+    <button class="gal-dot" data-idx="3"></button>
+    <button class="gal-dot" data-idx="4"></button>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS — dentro da Seção 6 -->
+<section id="s-test">
+  <span class="ey r">Depoimentos</span>
+  <h2 class="stit r d1">O que nossos clientes dizem depois de entender a diferença.</h2>
+  <p class="sbdy r d2">Profissionais de alta renda que decidiram parar de deixar o mercado decidir por eles.</p>
+  <div class="testi-cols r d3">
+    <div class="testi-col">
+      <div class="testi-inner" style="animation-duration:22s">
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Sempre achei que entendia de investimentos. Depois da primeira reunião com a Zé Investe, percebi que estava pagando quase 2% ao ano em taxas que nem sabia que existiam.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Carlos M."><div><p class="testi-name">Carlos M.</p><p class="testi-role">Médico, São Paulo</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«O que mais me surpreendeu foi a clareza. Pela primeira vez alguém sentou comigo e explicou onde está cada centavo e por quê está lá.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Fernanda R."><div><p class="testi-name">Fernanda R.</p><p class="testi-role">Advogada, Campinas</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Tinha patrimônio espalhado em 4 corretoras diferentes, sem nenhuma coerência. Em três meses organizamos tudo com uma lógica que faz sentido para os meus objetivos.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Roberto K."><div><p class="testi-name">Roberto K.</p><p class="testi-role">Empresário, Ribeirão Preto</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Sempre achei que entendia de investimentos. Depois da primeira reunião com a Zé Investe, percebi que estava pagando quase 2% ao ano em taxas que nem sabia que existiam.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="Carlos M."><div><p class="testi-name">Carlos M.</p><p class="testi-role">Médico, São Paulo</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«O que mais me surpreendeu foi a clareza. Pela primeira vez alguém sentou comigo e explicou onde está cada centavo e por quê está lá.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Fernanda R."><div><p class="testi-name">Fernanda R.</p><p class="testi-role">Advogada, Campinas</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Tinha patrimônio espalhado em 4 corretoras diferentes, sem nenhuma coerência. Em três meses organizamos tudo com uma lógica que faz sentido para os meus objetivos.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Roberto K."><div><p class="testi-name">Roberto K.</p><p class="testi-role">Empresário, Ribeirão Preto</p></div></div></div>
+      </div>
+    </div>
+    <div class="testi-col">
+      <div class="testi-inner rev" style="animation-duration:26s">
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Meu assessor anterior me ligava toda semana para oferecer produto novo. A Zé Investe me liga quando precisa. É diferente trabalhar com quem não tem nada para vender.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face" alt="Mariana T."><div><p class="testi-name">Mariana T.</p><p class="testi-role">Dentista, Belo Horizonte</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Finalmente alguém que fala a língua do planejamento, não da venda. O diagnóstico inicial já valeu cada centavo da taxa anual.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face" alt="André S."><div><p class="testi-name">André S.</p><p class="testi-role">Engenheiro, Porto Alegre</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Entrei achando que minha carteira estava boa. Saí entendendo que estava pagando caro por um serviço que não trabalhava para mim. A diferença em 12 meses foi expressiva.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Patrícia L."><div><p class="testi-name">Patrícia L.</p><p class="testi-role">Diretora, São Paulo</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Meu assessor anterior me ligava toda semana para oferecer produto novo. A Zé Investe me liga quando precisa. É diferente trabalhar com quem não tem nada para vender.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face" alt="Mariana T."><div><p class="testi-name">Mariana T.</p><p class="testi-role">Dentista, Belo Horizonte</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Finalmente alguém que fala a língua do planejamento, não da venda. O diagnóstico inicial já valeu cada centavo da taxa anual.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face" alt="André S."><div><p class="testi-name">André S.</p><p class="testi-role">Engenheiro, Porto Alegre</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Entrei achando que minha carteira estava boa. Saí entendendo que estava pagando caro por um serviço que não trabalhava para mim. A diferença em 12 meses foi expressiva.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Patrícia L."><div><p class="testi-name">Patrícia L.</p><p class="testi-role">Diretora, São Paulo</p></div></div></div>
+      </div>
+    </div>
+    <div class="testi-col">
+      <div class="testi-inner" style="animation-duration:19s">
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Pensei que era necessário ter muito dinheiro para ter um planejador. Com R$ 70 mil já consegui começar e a evolução foi consistente desde o início.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=80&h=80&fit=crop&crop=face" alt="Lucas P."><div><p class="testi-name">Lucas P.</p><p class="testi-role">Analista, Brasília</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«A tranquilidade de saber que tem alguém olhando pela minha carteira sem interesse em me vender nada não tem preço. Literalmente.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face" alt="Thiago N."><div><p class="testi-name">Thiago N.</p><p class="testi-role">Arquiteto, Curitiba</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Tive coragem de perguntar quanto o meu assessor ganhava comigo. A resposta me fez ligar no mesmo dia para a Zé Investe.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop&crop=face" alt="Renata C."><div><p class="testi-name">Renata C.</p><p class="testi-role">Consultora, Florianópolis</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Pensei que era necessário ter muito dinheiro para ter um planejador. Com R$ 70 mil já consegui começar e a evolução foi consistente desde o início.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=80&h=80&fit=crop&crop=face" alt="Lucas P."><div><p class="testi-name">Lucas P.</p><p class="testi-role">Analista, Brasília</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«A tranquilidade de saber que tem alguém olhando pela minha carteira sem interesse em me vender nada não tem preço. Literalmente.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=80&h=80&fit=crop&crop=face" alt="Thiago N."><div><p class="testi-name">Thiago N.</p><p class="testi-role">Arquiteto, Curitiba</p></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">«Tive coragem de perguntar quanto o meu assessor ganhava comigo. A resposta me fez ligar no mesmo dia para a Zé Investe.»</p><div class="testi-footer"><img class="testi-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop&crop=face" alt="Renata C."><div><p class="testi-name">Renata C.</p><p class="testi-role">Consultora, Florianópolis</p></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 7 — METODOLOGIA + FAQ -->
+<div style="height:1px;background:rgba(255,255,255,.06)"></div>
+<section id="s-passo">
+  <span class="ey r">Metodologia</span>
+  <h2 class="ptit-main r d1">Como funciona o sucesso da nossa metodologia</h2>
+
+  <div class="pgrid">
+    <div class="prow3">
+      <div class="pstep r d2">
+        <span class="psbadge">1</span>
+        <div class="psico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <p class="pstit">Clique no botão</p>
+        <div style="margin:0 0 16px">
+          <a href="https://wa.me/5516974005673" target="_blank" class="pb">
+            <span class="pb-t">Falar com um planejador</span>
+            <span class="pb-i"><svg viewBox="0 0 24 24" fill="none" stroke="#07152e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </a>
+        </div>
+        <p class="psdsc">Você será direcionado para uma conversa rápida e objetiva. Sem formulário longo, sem pressão.</p>
+      </div>
+
+      <div class="pstep r d2">
+        <span class="psbadge">2</span>
+        <div class="psico"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <p class="pstit">Preencha seus dados</p>
+        <p class="psdsc">Em até 24 horas úteis, um planejador da Zé Investe entrará em contato. Sem produto para vender. Sem pressão.</p>
+      </div>
+
+      <div class="pstep r d3">
+        <span class="psbadge">3</span>
+        <div class="psico"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <p class="pstit">Pronto!</p>
+        <p class="psdsc">Seu planejador vai te orientar nos próximos passos com base na sua situação e objetivos. Se fizer sentido, avançamos juntos.</p>
+        <div class="pimg-wrap">
+          <svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;border-radius:12px">
+            <defs>
+              <linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0a1a3a"/><stop offset="100%" stop-color="#060f24"/></linearGradient>
+              <linearGradient id="pline" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a5fd4"/><stop offset="100%" stop-color="#4da6ff"/></linearGradient>
+              <linearGradient id="parea" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a5fd4" stop-opacity=".25"/><stop offset="100%" stop-color="#1a5fd4" stop-opacity="0"/></linearGradient>
+              <linearGradient id="pbar" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e6ee8" stop-opacity=".7"/><stop offset="100%" stop-color="#0d3a80" stop-opacity=".3"/></linearGradient>
+              <filter id="pglow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <rect width="480" height="240" fill="url(#pbg)"/>
+            <line x1="40" y1="40" x2="460" y2="40" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+            <line x1="40" y1="110" x2="460" y2="110" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+            <line x1="40" y1="180" x2="460" y2="180" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+            <rect x="55" y="135" width="28" height="60" rx="4" fill="url(#pbar)"/>
+            <rect x="95" y="110" width="28" height="85" rx="4" fill="url(#pbar)"/>
+            <rect x="135" y="90" width="28" height="105" rx="4" fill="url(#pbar)"/>
+            <rect x="175" y="120" width="28" height="75" rx="4" fill="url(#pbar)"/>
+            <rect x="215" y="75" width="28" height="120" rx="4" fill="url(#pbar)"/>
+            <rect x="255" y="55" width="28" height="140" rx="4" fill="url(#pbar)"/>
+            <rect x="295" y="38" width="28" height="157" rx="4" fill="url(#pbar)"/>
+            <rect x="335" y="26" width="28" height="169" rx="4" fill="#1e6ee8" opacity=".9"/>
+            <rect x="375" y="14" width="28" height="181" rx="4" fill="#1e6ee8" opacity=".95"/>
+            <rect x="415" y="6" width="28" height="189" rx="4" fill="#1e6ee8"/>
+            <polygon points="55,165 95,142 135,118 175,148 215,103 255,78 295,54 335,40 375,26 415,18 415,195 55,195" fill="url(#parea)"/>
+            <polyline points="55,165 95,142 135,118 175,148 215,103 255,78 295,54 335,40 375,26 415,18" fill="none" stroke="url(#pline)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#pglow)"/>
+            <circle cx="415" cy="18" r="6" fill="#4da6ff" filter="url(#pglow)"/>
+            <circle cx="415" cy="18" r="3" fill="white"/>
+            <rect x="316" y="4" width="68" height="16" rx="4" fill="rgba(30,110,232,.35)" stroke="rgba(77,166,255,.3)" stroke-width="1"/>
+            <text x="350" y="15" text-anchor="middle" fill="#7dc4ff" font-size="8" font-family="Montserrat,sans-serif" font-weight="700">+28.5%</text>
+            <rect x="288" y="202" width="164" height="30" rx="6" fill="rgba(0,0,0,.4)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+            <text x="303" y="214" fill="rgba(255,255,255,.5)" font-size="7" font-family="Montserrat,sans-serif" font-weight="700">CARTEIRA</text>
+            <text x="303" y="226" fill="#4da6ff" font-size="10" font-family="Montserrat,sans-serif" font-weight="800">R$ 1.284.930</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ embutido logo abaixo, dentro da mesma seção -->
+  <div id="s-faq" class="faq-inside r d2">
+    <span class="ey" style="color:var(--w30);border-color:var(--w12)">FAQ</span>
+    <h2 class="stit" style="margin-bottom:0">Perguntas que todo mundo faz antes de começar.</h2>
+    <div class="flist flist-dark">
+      <div class="fi2 fi2-dark"><button class="fbt fbt-dark" onclick="faq(this)">Qual a diferença entre a Zé Investe e um assessor de investimentos?<span class="fpl fpl-dark">+</span></button><div class="fan fan-dark">O assessor é remunerado por comissão dos produtos que distribui — incentivo estrutural para te colocar no que mais rende para ele. A Zé Investe cobra taxa fixa e não recebe comissão. <b>Quanto melhor seu patrimônio performar, mais tempo você fica conosco.</b></div></div>
+      <div class="fi2 fi2-dark"><button class="fbt fbt-dark" onclick="faq(this)">Preciso mudar de banco ou corretora?<span class="fpl fpl-dark">+</span></button><div class="fan fan-dark">Não necessariamente. A Mont Capital opera em BTG Pactual, XP, Safra, Genial e Avenue. Você abre conta na corretora de sua escolha e continua com acesso ao seu dinheiro a qualquer momento.</div></div>
+      <div class="fi2 fi2-dark"><button class="fbt fbt-dark" onclick="faq(this)">Quanto custa o serviço?<span class="fpl fpl-dark">+</span></button><div class="fan fan-dark">Nossa remuneração é de <b>1% ao ano sobre o patrimônio gerido</b>, com valor mínimo de R$ 700 por ano. Sem taxa de abertura, sem taxa de resgate, sem custo adicional. Tudo declarado antes de começar.</div></div>
+      <div class="fi2 fi2-dark"><button class="fbt fbt-dark" onclick="faq(this)">Qual o patrimônio mínimo?<span class="fpl fpl-dark">+</span></button><div class="fan fan-dark">Atendemos clientes a partir de <b>R$ 35 mil em patrimônio financeiro investido</b>.</div></div>
+      <div class="fi2 fi2-dark"><button class="fbt fbt-dark" onclick="faq(this)">E se eu quiser encerrar o contrato?<span class="fpl fpl-dark">+</span></button><div class="fan fan-dark">Sem multa. Encerre com 60 dias de aviso prévio, sem penalidade. IPS, diagnóstico e relatórios ficam com você.</div></div>
+      <div class="fi2 fi2-dark"><button class="fbt fbt-dark" onclick="faq(this)">A Zé Investe é regulada?<span class="fpl fpl-dark">+</span></button><div class="fan fan-dark">Sim. A Heistaek Ai Participações e Negócios LTDA opera como escritório de planejamento financeiro pessoal. A Mont Capital é gestora autorizada pela CVM e autorregulada pela ANBIMA.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDER LOGOS -->
+<div style="height:1px;background:rgba(255,255,255,.06)"></div>
+<section id="s-logos">
+  <div class="logos-track-wrap">
+    <div class="logos-track">
+      <div class="logo-slide"><span class="logo-name">BTG Pactual</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><span class="logo-name">XP Investimentos</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><span class="logo-name">Safra</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><span class="logo-name">Genial</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><span class="logo-name">Avenue</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><span class="logo-name">BTG Pactual</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><span class="logo-name">XP Investimentos</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><span class="logo-name">Safra</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><span class="logo-name">Genial</span></div><div class="logo-dot"></div>
+      <div class="logo-slide"><span class="logo-name">Avenue</span></div><div class="logo-dot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 8 — 1º PASSO (CTA FINAL) -->
+<div style="height:1px;background:rgba(7,21,46,.08)"></div>
+<section id="scta">
+  <div class="cta-glow"></div>
+  <span class="ey ey-dark r" style="position:relative;z-index:1">Diagnóstico gratuito</span>
+  <h2 class="ctt r d1">O primeiro passo não te leva onde quer chegar. Mas te tira do lugar onde não quer ficar.</h2>
+  <p class="ctb r d2">Comece com um diagnóstico gratuito. Sem compromisso. Sem produto. Sem pressão. Uma conversa de 30 minutos onde entendemos sua situação e você entende como o planejamento funciona na prática.</p>
+  <p class="ctb r d2" style="margin-top:-4px">Se fizer sentido, avançamos juntos. Se não fizer, você vai embora sabendo mais do que entrou.</p>
+  <a href="https://wa.me/5516974005673" target="_blank" class="pb pb-dark r d3" style="margin-top:8px">
+    <span class="pb-t">Agendar meu diagnóstico gratuito</span>
+    <span class="pb-i"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+  </a>
+  <p class="ctn r d3">Sem compromisso. Sem produto. Sem pressão.</p>
+</section>
+
+<div style="height:1px;background:rgba(255,255,255,.06)"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand-col">
+      <p class="fbrand">Zé Investe</p>
+      <p class="finfo">zeinveste.com<br>contato@zeinveste.com<br>Ribeirão Preto, SP</p>
+      <div class="footer-socials">
+        <a href="#" class="fsocial" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+        </a>
+        <a href="#" class="fsocial" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" class="fsocial" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-links-col">
+      <p class="flbl">Links</p>
+      <div class="flinks">
+        <a href="#s-zi">O que é a ZI</a>
+        <a href="#s-fee">Diferencial</a>
+        <a href="#s-passo">Metodologia</a>
+        <a href="https://wa.me/5516974005673" target="_blank">Diagnóstico gratuito</a>
+        <a href="#s-faq">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-docs-col">
+      <p class="flbl">Documentos</p>
+      <div class="flinks">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Código de Conduta</a>
+        <a href="#">IPS Modelo</a>
+      </div>
+    </div>
+    <div class="footer-legal-col">
+      <p class="flbl">Legal</p>
+      <div class="flgl">
+        <p>Zé Investe é um nome Fantasia e Marca Registrada de:</p>
+        <p style="font-weight:700;color:rgba(255,255,255,.35);margin-top:4px">HEISTAEK</p>
+        <p style="margin-top:6px">HEISTAEK AI PARTICIPAÇÕES E NEGÓCIOS LTDA</p>
+        <p>CNPJ: 30.262.322/0001-70</p>
+        <p>Av. Presidente Vargas, 2121, CJ 1407</p>
+        <p>Jardim Santa Ângela, Ribeirão Preto/SP</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mapa -->
+  <div class="footer-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.5!2d-47.8122!3d-21.1775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAv.%20Presidente%20Vargas%2C%202121%2C%20Ribeir%C3%A3o%20Preto%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1"
+      width="100%"
+      height="220"
+      style="border:0;border-radius:12px;filter:grayscale(1) invert(1) brightness(.7) contrast(.9)"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Localização Zé Investe">
+    </iframe>
+  </div>
+
+  <hr class="fhr">
+  <p class="fdisc">* A B3 cobra taxa de corretagem.<br><br>A Zé Investe atua como escritório de planejamento financeiro pessoal e não exerce atividade de consultoria de valores mobiliários ou assessoria de investimentos nos termos das Resoluções CVM nº 19/2021 e nº 178/2023. A gestão da carteira administrada é realizada pela Mont Capital Gestão e Administração de Recursos S.A. (CNPJ 22.598.618/0001-38), autorizada pela CVM. © 2025 Zé Investe.</p>
+
+  <!-- WhatsApp Floating Button — aparece só após seção 2, estilo expandível -->
+  <a href="https://wa.me/5516974005673" target="_blank" class="whatsapp-float" id="whatsappFloat" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-float-text">WhatsApp</span>
+  </a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
