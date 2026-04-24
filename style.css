@@ -323,11 +323,7 @@ body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:
 
 /* FIX 4: FAQ DARK — sem fundo branco, integrado na seção escura */
 .faq-inside{
-  width:100%;max-width:700px;margin-top:60px;
-  padding-top:52px;
-  border-top:1px solid var(--w06);
-  display:flex;flex-direction:column;align-items:center;
-  text-align:center;
+  background: transparent;
 }
 .flist-dark{max-width:700px;width:100%;margin-top:32px;text-align:left}
 .fi2-dark{border-bottom:1px solid var(--w06)}
