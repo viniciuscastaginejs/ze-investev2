@@ -210,7 +210,7 @@ body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:
 .testi-stars{color:#b8860b;font-size:11px;margin-bottom:10px;letter-spacing:2px}
 
 /* ORBITAL */
-.orb-wrap{display:flex;align-items:center;gap:40px;max-width:1000px;width:100%;margin-top:40px;flex-wrap:wrap;justify-content:center}
+.orb-wrap{display:flex;flex-direction:column;align-items:center;gap:28px;width:100%;margin-top:40px}
 .orb-stage-box{position:relative;width:380px;height:380px;flex-shrink:0}
 .orb-ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(255,255,255,.08)}
 .orb-ring-inner{position:absolute;inset:60px;border-radius:50%;border:1px dashed rgba(255,255,255,.05)}
@@ -226,7 +226,7 @@ body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:
 .orb-node.on .orb-btn svg{stroke:#6eb8ff}
 .orb-lbl{font-size:9px;font-weight:700;color:rgba(255,255,255,.35);letter-spacing:.03em;white-space:nowrap;font-family:'Montserrat',sans-serif;transition:color .2s}
 .orb-node.on .orb-lbl{color:rgba(110,184,255,.85)}
-.orb-card-box{flex:1;min-width:280px;max-width:380px;background:rgba(13,33,71,.85);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 24px;transition:opacity .3s,transform .3s;align-self:center}
+.orb-card-box{width:100%;max-width:380px;background:rgba(13,33,71,.85);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 24px;transition:opacity .3s,transform .3s}
 .orb-card-top2{display:flex;align-items:center;gap:8px;margin-bottom:12px}
 .orb-badge{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(110,184,255,.15);color:#6eb8ff;border-radius:100px;padding:3px 10px}
 .orb-tag{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.22)}
