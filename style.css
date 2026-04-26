@@ -37,47 +37,42 @@ body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:
 
 /* =============================================
    HEADER
-   - parado: gradiente circular claro (#e8e8e8 → #d2dce6)
-     texto e logos escuros
-   - scrolled: glass azul escuro, texto branco
+   - parado: branco puro, texto e logos escuros
+   - scrolled: glass branco forte (blur + saturate)
    ============================================= */
 .site-header{
   position:fixed;top:0;left:0;width:100%;z-index:999;
   padding:14px 20px;
-  background:var(--header-static);
-  border-bottom:1px solid rgba(7,21,46,.08);
+  background:#fff;
+  border-bottom:1px solid rgba(7,21,46,.07);
   transition:
-    background .4s ease,
-    backdrop-filter .4s ease,
-    -webkit-backdrop-filter .4s ease,
-    box-shadow .4s ease,
-    border-color .4s ease,
+    background .35s ease,
+    backdrop-filter .35s ease,
+    -webkit-backdrop-filter .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease,
     padding .3s ease;
 }
-/* scrolled: glass azul */
+/* scrolled: glass branco mais forte */
 .site-header.scrolled{
   padding:10px 20px;
-  background:var(--header-scroll);
-  backdrop-filter:blur(28px) saturate(200%);
-  -webkit-backdrop-filter:blur(28px) saturate(200%);
-  box-shadow:0 6px 32px rgba(0,0,0,.32), inset 0 -1px 0 rgba(100,160,255,.18);
-  border-bottom-color:rgba(100,160,255,.15);
+  background:rgba(255,255,255,.55);
+  backdrop-filter:blur(32px) saturate(220%) brightness(1.04);
+  -webkit-backdrop-filter:blur(32px) saturate(220%) brightness(1.04);
+  box-shadow:0 2px 24px rgba(7,21,46,.10);
+  border-bottom-color:rgba(7,21,46,.06);
 }
 .header-inner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:28px;max-width:1280px;margin:0 auto}
-.header-brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:-.02em;white-space:nowrap;
-  color:var(--inv);transition:color .4s ease}
-.site-header.scrolled .header-brand{color:#fff}
+.header-brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:-.02em;white-space:nowrap;color:var(--inv)}
 
-/* logo: parado escuro, scrolled branco */
-.header-logo{height:34px;width:auto;display:block;object-fit:contain;
-  filter:none;transition:filter .4s ease}
-.site-header.scrolled .header-logo{filter:brightness(0) invert(1)}
+/* logo sempre escura (fundo claro) */
+.header-logo{height:34px;width:auto;display:block;object-fit:contain;filter:brightness(0)}
 
-/* parceiros: parado escuro (cor natural ou escurecido), scrolled branco */
+/* parceiros sempre escuros */
 .header-partners{display:flex;align-items:center;justify-content:flex-end;gap:22px;flex-wrap:wrap}
 .header-partners img{height:26px;width:auto;object-fit:contain;display:block;
-  opacity:.7;filter:brightness(0);transition:opacity .2s,filter .4s ease,transform .2s}
-.site-header.scrolled .header-partners img{filter:brightness(0) invert(1);opacity:.85}
+  opacity:.6;filter:brightness(0);transition:opacity .2s,transform .2s}
+.header-partners img:hover{opacity:.9;transform:translateY(-1px)}
 .header-partners img:hover{opacity:1;transform:translateY(-1px)}
 
 @media(max-width:900px){
