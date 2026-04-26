@@ -3,7 +3,7 @@ html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 :root{
   --n0:#020c1a;--n1:#07152e;--n2:#091B3D;--n3:#0d2147;--n4:#162648;
-  --off:#f2f5fb;--inv:#07152e;--idim:rgba(7,21,46,.58);
+  --off:#f2f5fb;--inv:#203960;--idim:rgba(32,57,96,.58);
   --w80:rgba(255,255,255,.82);--w55:rgba(255,255,255,.55);
   --w30:rgba(255,255,255,.30);--w12:rgba(255,255,255,.12);
   --w06:rgba(255,255,255,.06);--w03:rgba(255,255,255,.03);
@@ -66,7 +66,7 @@ body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:
 .header-brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:-.02em;white-space:nowrap;color:var(--inv)}
 
 /* logo sempre escura (fundo claro) */
-.header-logo{height:34px;width:auto;display:block;object-fit:contain;filter:brightness(0)}
+.header-logo{height:34px;width:auto;display:block;object-fit:contain;filter:none}
 
 /* parceiros sempre escuros */
 .header-partners{display:flex;align-items:center;justify-content:flex-end;gap:22px;flex-wrap:wrap}
@@ -210,7 +210,7 @@ body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:
 .testi-stars{color:#b8860b;font-size:11px;margin-bottom:10px;letter-spacing:2px}
 
 /* ORBITAL */
-.orb-wrap{display:flex;align-items:center;gap:40px;max-width:1000px;width:100%;margin-top:40px;flex-wrap:wrap;justify-content:flex-end}
+.orb-wrap{display:flex;align-items:center;gap:40px;max-width:1000px;width:100%;margin-top:40px;flex-wrap:wrap;justify-content:center}
 .orb-stage-box{position:relative;width:380px;height:380px;flex-shrink:0}
 .orb-ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(255,255,255,.08)}
 .orb-ring-inner{position:absolute;inset:60px;border-radius:50%;border:1px dashed rgba(255,255,255,.05)}
@@ -281,7 +281,7 @@ body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:
 @keyframes logoScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .logos-track:hover{animation-play-state:paused}
 .logo-slide{display:flex;align-items:center;justify-content:center;gap:12px;padding:0 40px;white-space:nowrap;flex-shrink:0}
-.logo-img{height:28px;width:auto;object-fit:contain;display:block;opacity:.55;filter:brightness(0) invert(1);transition:opacity .3s}
+.logo-img{height:28px;width:auto;object-fit:contain;display:block;opacity:.75;filter:brightness(0) invert(1);transition:opacity .3s}
 .logo-slide:hover .logo-img{opacity:.9}
 .logo-name{font-size:clamp(13px,1.6vw,17px);font-weight:800;letter-spacing:-.04em;color:rgba(255,255,255,.22);transition:color .3s}
 .logo-slide:hover .logo-name{color:rgba(255,255,255,.55)}
