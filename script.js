@@ -1,5 +1,6 @@
 /* ============================================
-   HERO — pré-carrega tudo, crossfade suave, 4.5s por slid
+   HERO — pré-carrega TUDO primeiro, só então inicia
+   crossfade instantâneo após cache warm
    ============================================ */
 (function(){
   var items = Array.from(document.querySelectorAll('.h-item'));
@@ -7,43 +8,124 @@
   var bgB   = document.querySelector('.hero-bg-b');
   if(!items.length || !bgA || !bgB) return;
 
+  /* mapeia todas as imagens disponíveis por palavra-chave
+     permite variar automaticamente (voce1/voce2, crescimento1/2/3, etc.) */
+  var imagePool = {
+    'voce':      ['images/voce1.jpg','images/voce2.jpg'],
+    'amigos':    ['images/amigos1.jpg','images/amigos2.jpg'],
+    'crescimento':['images/crescimento1.png','images/crescimento2.jpg','images/crescimento3.jpg'],
+    'familia':   ['images/familia1.jpg','images/familia2.jpg'],
+    'sonhos':    ['images/sonhos2.jpg'],
+    'realizacao':['images/realizacao1.jpg','images/realizacao2.jpg'],
+    'conquistas':['images/conquista1.jpg'],
+    'diversao':  ['images/amigos2.jpg','images/amigos1.jpg'],
+    'futuro':    ['images/futuro1.png','images/futuro2.jpg'],
+    'homem':     ['images/homem-de-sucesso.png'],
+    'mulher':    ['images/mulher-de-sucesso.png']
+  };
+
+  /* índice de variação por slot */
+  var slotVariant = {};
+
+  function getSrc(index){
+    var el  = items[index];
+    var src = el.getAttribute('data-bg');
+    /* tenta encontrar uma pool para variar */
+    var key = null;
+    for(var k in imagePool){
+      if(src && src.indexOf(k) !== -1){ key = k; break; }
+    }
+    if(!key) return src;
+    var pool = imagePool[key];
+    if(!slotVariant[index]) slotVariant[index] = 0;
+    var v = slotVariant[index] % pool.length;
+    slotVariant[index]++;
+    return pool[v];
+  }
+
+  /* --- pré-carrega TUDO de uma vez no início --- */
+  var preloaded = {};
+  var allSrcs   = [];
+  for(var k in imagePool){ imagePool[k].forEach(function(s){ allSrcs.push(s); }); }
+  /* também pega os data-bg originais */
+  items.forEach(function(el){ var s=el.getAttribute('data-bg'); if(s) allSrcs.push(s); });
+  /* filtra duplicatas */
+  allSrcs = allSrcs.filter(function(s,i,a){ return a.indexOf(s)===i; });
+
+  var loadedCount = 0;
+  var totalCount  = allSrcs.length;
+  var started     = false;
+
+  function tryStart(){
+    if(started) return;
+    started = true;
+    runHero();
+  }
+
+  allSrcs.forEach(function(src){
+    var img = new Image();
+    preloaded[src] = img;
+    img.onload = img.onerror = function(){
+      loadedCount++;
+      /* inicia quando pelo menos a primeira imagem carregar, ou todas */
+      if(loadedCount >= 1) tryStart();
+    };
+    img.src = src;
+  });
+
+  /* fallback: começa em 800ms independente do cache */
+  setTimeout(tryStart, 800);
+
+  /* ---- engine de crossfade ---- */
   var cur      = 0;
   var activeBg = bgA;
   var nextBg   = bgB;
 
-  /* pré-carrega todas as imagens */
-  items.forEach(function(item){
-    var src = item.getAttribute('data-bg');
-    if(src){ var img = new Image(); img.src = src; }
-  });
-
   function setBg(index, first){
-    var src = items[index].getAttribute('data-bg');
+    var src = getSrc(index);
+
+    /* troca texto imediatamente */
     items.forEach(function(i){ i.classList.remove('vis'); });
     items[index].classList.add('vis');
+
     if(!src) return;
 
-    nextBg.style.transition   = 'none';
-    nextBg.style.opacity      = '0';
-    nextBg.style.transform    = 'scale(1.04)';
+    /* prepara o layer de fundo sem transição */
+    nextBg.style.transition      = 'none';
+    nextBg.style.opacity         = '0';
+    nextBg.style.transform       = 'scale(1.035)';
     nextBg.style.backgroundImage = "url('" + src + "')";
-    void nextBg.offsetWidth; /* force reflow */
 
-    var dur = first ? '.5s' : '1s';
-    nextBg.style.transition = 'opacity '+dur+' ease, transform 6s ease';
+    /* força reflow para que o browser processe o style acima */
+    void nextBg.offsetWidth;
+
+    /* anima */
+    nextBg.style.transition = first
+      ? 'opacity .5s ease, transform 7s ease'
+      : 'opacity .9s ease, transform 7s ease';
     nextBg.style.opacity    = '1';
     nextBg.style.transform  = 'scale(1)';
 
+    /* faz o layer anterior sair */
     if(!first){
       var old = activeBg;
-      old.style.transition = 'opacity 1s ease';
+      old.style.transition = 'opacity .9s ease';
       old.style.opacity    = '0';
     }
-    var tmp  = activeBg; activeBg = nextBg; nextBg = tmp;
+
+    /* troca referências */
+    var tmp  = activeBg;
+    activeBg = nextBg;
+    nextBg   = tmp;
   }
 
-  setBg(0, true);
-  setInterval(function(){ cur = (cur+1) % items.length; setBg(cur, false); }, 4500);
+  function runHero(){
+    setBg(0, true);
+    setInterval(function(){
+      cur = (cur + 1) % items.length;
+      setBg(cur, false);
+    }, 4500);
+  }
 })();
 
 /* ============================================
@@ -101,7 +183,9 @@
     outside.forEach(function(el){io.observe(el);});
   }
   function check(){var vh=window.innerHeight;outside.forEach(function(el){if(el.getBoundingClientRect().top<vh*.95)show(el);});}
-  check();window.addEventListener('scroll',check,{passive:true});window.addEventListener('load',check);
+  check();
+  window.addEventListener('scroll',check,{passive:true});
+  window.addEventListener('load',check);
 })();
 
 /* FAQ */
@@ -111,12 +195,21 @@ function faq(btn){
   if(!open) it.classList.add('open');
 }
 
-/* HEADER */
+/* ============================================
+   HEADER — glass na rolagem, gradiente circular parado
+   ============================================ */
 (function(){
   var h=document.getElementById('siteHeader');
   if(!h) return;
-  function t(){h.classList.toggle('scrolled',window.scrollY>20);}
-  t();window.addEventListener('scroll',t,{passive:true});
+  function t(){
+    if(window.scrollY > 20){
+      h.classList.add('scrolled');
+    } else {
+      h.classList.remove('scrolled');
+    }
+  }
+  t();
+  window.addEventListener('scroll',t,{passive:true});
 })();
 
 /* WHATSAPP FLOAT */
@@ -129,5 +222,6 @@ function faq(btn){
     if(!shown&&r.bottom<0){btn.classList.add('wz-visible');shown=true;}
     else if(shown&&r.bottom>=0){btn.classList.remove('wz-visible');shown=false;}
   }
-  window.addEventListener('scroll',check,{passive:true});check();
+  window.addEventListener('scroll',check,{passive:true});
+  check();
 })();
