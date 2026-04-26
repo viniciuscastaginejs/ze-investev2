@@ -271,21 +271,21 @@ body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:
 .pimg-wrap{margin-top:20px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
 
 /* LOGOS */
-#s-logos{background:var(--n0);padding:clamp(40px,5vw,64px) 0;display:flex;flex-direction:column;align-items:center;position:relative;overflow:hidden}
-#s-logos::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);background-size:36px 36px;pointer-events:none;z-index:0}
+#s-logos{background:#fff;padding:clamp(40px,5vw,64px) 0;display:flex;flex-direction:column;align-items:center;position:relative;overflow:hidden}
+#s-logos::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(32,57,96,.05) 1px,transparent 1px);background-size:36px 36px;pointer-events:none;z-index:0}
 .logos-track-wrap{width:100%;overflow:hidden;position:relative;z-index:1}
 .logos-track-wrap::before,.logos-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:160px;z-index:2;pointer-events:none}
-.logos-track-wrap::before{left:0;background:linear-gradient(to right,var(--n0),transparent)}
-.logos-track-wrap::after{right:0;background:linear-gradient(to left,var(--n0),transparent)}
+.logos-track-wrap::before{left:0;background:linear-gradient(to right,#fff,transparent)}
+.logos-track-wrap::after{right:0;background:linear-gradient(to left,#fff,transparent)}
 .logos-track{display:flex;gap:0;width:max-content;animation:logoScroll 28s linear infinite}
 @keyframes logoScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .logos-track:hover{animation-play-state:paused}
 .logo-slide{display:flex;align-items:center;justify-content:center;gap:12px;padding:0 40px;white-space:nowrap;flex-shrink:0}
-.logo-img{height:28px;width:auto;object-fit:contain;display:block;opacity:.75;filter:brightness(0) invert(1);transition:opacity .3s}
+.logo-img{height:28px;width:auto;object-fit:contain;display:block;opacity:.85;filter:none;transition:opacity .3s}
 .logo-slide:hover .logo-img{opacity:.9}
 .logo-name{font-size:clamp(13px,1.6vw,17px);font-weight:800;letter-spacing:-.04em;color:rgba(255,255,255,.22);transition:color .3s}
 .logo-slide:hover .logo-name{color:rgba(255,255,255,.55)}
-.logo-dot{width:4px;height:4px;background:rgba(255,255,255,.12);border-radius:50%;margin:0 40px;flex-shrink:0;align-self:center}
+.logo-dot{width:4px;height:4px;background:rgba(32,57,96,.15);border-radius:50%;margin:0 40px;flex-shrink:0;align-self:center}
 
 /* CTA FINAL */
 #scta{background:var(--off);color:var(--inv);padding:clamp(68px,9vw,110px) 24px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
