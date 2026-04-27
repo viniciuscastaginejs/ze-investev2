@@ -363,14 +363,16 @@ footer{background:#020c1a;border-top:1px solid var(--w06);padding:52px clamp(24p
   .testi-col:nth-child(2),.testi-col:nth-child(3){display:none}
   .logos-track-wrap::before,.logos-track-wrap::after{width:80px}
 .hero-cta{
+  position:absolute !important;
   width:calc(100% - 32px) !important;
   height:auto;
   border-radius:55px;
   padding:14px 24px;
   right:16px;
-  bottom:140px;
+  top:72%;
   left:16px;
   justify-content:center;
+  bottom:auto;
 }
 .hero-cta:hover{width:calc(100% - 32px)}
 @media(max-width:480px){
