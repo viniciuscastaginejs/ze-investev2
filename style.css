@@ -105,9 +105,6 @@ body{font-family:'Montserrat',-apple-system,sans-serif;background:#020c1a;color:
 .hero-cta-icon{width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:22px;line-height:1;flex-shrink:0;color:#07152e;transition:transform .22s ease;order:2}
 .hero-cta:hover .hero-cta-icon{transform:scale(1.08)}
 
-/* SEPARADOR */
-.sec-sep{height:1px;background:rgba(255,255,255,.05)}
-
 /* SEÇÕES */
 .sec{padding:clamp(52px,7vw,88px) clamp(24px,8vw,88px);display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
 .s0{background:var(--n0)}.s1{background:var(--n1)}.s2{background:var(--n2)}.s3{background:var(--n3)}.s4{background:var(--n4)}
