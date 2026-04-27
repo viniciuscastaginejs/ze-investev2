@@ -362,19 +362,54 @@ footer{background:#020c1a;border-top:1px solid var(--w06);padding:52px clamp(24p
   .testi-cols{grid-template-columns:1fr;max-height:400px;padding:0 20px}
   .testi-col:nth-child(2),.testi-col:nth-child(3){display:none}
   .logos-track-wrap::before,.logos-track-wrap::after{width:80px}
-.hero-cta{
-  position:absolute !important;
-  width:calc(100% - 32px) !important;
-  height:52px !important;
-  border-radius:55px;
-  padding:0 24px;
-  right:16px;
-  top:72%;
-  left:16px;
-  justify-content:center;
-  bottom:auto;
+  .sec-divider{margin:32px 0 0}
+  .fdisc{font-size:11px}
+  .footer-map-row{flex-direction:column}
+  .footer-map,.footer-map iframe{height:120px;max-height:120px}
+  .zi-grid{grid-template-columns:1fr;gap:32px;width:100%;max-width:100%}
+  .stit-left,.sbdy-left{text-align:center}
+  #s-zi{align-items:center;text-align:center}
+  .zi-img{height:220px}
+  .hero-cta{
+    position:absolute !important;
+    width:calc(100% - 32px) !important;
+    height:52px !important;
+    border-radius:55px;
+    padding:0 24px;
+    right:16px;
+    top:72%;
+    left:16px;
+    justify-content:center;
+    bottom:auto;
+  }
+  .hero-cta:hover{width:calc(100% - 32px)}
+  .hero-cta-text{opacity:1 !important;transform:none !important;transition:none}
+  .hero-cta-icon{display:none}
 }
-.hero-cta:hover{width:calc(100% - 32px)}
+
+@media(max-width:480px){
+  #hero{padding:72px 16px 48px}
+  .htit{font-size:clamp(34px,11vw,48px)}
+  .htit .h-item{font-size:clamp(22px,8vw,38px)}
+  .hsub{font-size:14px}
+  .pb-i{width:30px;height:30px}
+  .pb-t{font-size:10px}
+  .sec{padding:36px 16px}
+  .stit{font-size:clamp(20px,7vw,30px)}
+  .orb-stage-box{width:240px;height:240px}
+  .orb-btn{width:40px;height:40px}
+  .orb-btn svg{width:14px;height:14px}
+  .orb-lbl{font-size:8px}
+  .orb-ctit{font-size:15px}
+  .orb-cdesc{font-size:11px}
+  .pstep{padding:20px 16px;border-radius:14px}
+  .pstit{font-size:16px}
+  .psbadge{width:24px;height:24px;font-size:9px;top:10px;right:10px}
+  footer{padding:28px 16px 24px}
+  .fdisc{font-size:10px}
+  .hero-cta:hover{width:calc(100% - 32px)}
+  .whatsapp-float{bottom:16px;left:16px}
+}
 @media(max-width:480px){
   #hero{padding:72px 16px 48px}
   .htit{font-size:clamp(34px,11vw,48px)}
