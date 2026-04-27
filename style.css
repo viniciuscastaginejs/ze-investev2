@@ -395,4 +395,21 @@ footer{background:#020c1a;border-top:1px solid var(--w06);padding:52px clamp(24p
   .fdisc{font-size:10px}
   .hero-cta:hover{width:250px}
   .whatsapp-float{bottom:16px;left:16px}
+
+  /* Mobile: botão CTA hero sempre expandido, sem efeito de bolinha */
+.hero-cta{
+  width:auto !important;
+  height:auto;
+  border-radius:55px;
+  padding:12px 20px 12px 24px;
+  right:16px;
+  bottom:16px;
+}
+.hero-cta-text{
+  opacity:1 !important;
+  transform:none !important;
+  transition:none;
+}
+.hero-cta-icon{
+  display:none;
 }
